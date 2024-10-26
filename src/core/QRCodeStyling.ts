@@ -38,6 +38,7 @@ export default class QRCodeStyling {
       return;
     }
 
+    // @ts-ignore
     this._qr = <QRCode>qr.default(this._options.qrOptions.typeNumber, this._options.qrOptions.errorCorrectionLevel);
     this._qr.addData(this._options.data, this._options.qrOptions.mode || getMode(this._options.data));
     this._qr.make();
